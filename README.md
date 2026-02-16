@@ -25,7 +25,7 @@ MTProto
 --proxy-secret=secret_here
 ```
 
-For more information, please refer to the official documentation at:\
-https://core.telegram.org/bots/api#using-a-local-bot-api-server.\
-And Home Assistant App docs here:\
+For more information, please refer to the official documentation at: \
+https://core.telegram.org/bots/api#using-a-local-bot-api-server. \
+And Home Assistant App docs here: \
 https://github.com/avbor/hassio-apps/blob/main/telegram-bot-api/DOCS.md
