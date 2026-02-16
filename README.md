@@ -1,10 +1,10 @@
-# Home Assistant App: Telegram Bot API - Docker Image
+## Home Assistant App: Telegram Bot API - Docker Image
 
 Based on [hanwg](https://github.com/hanwg/telegram-bot-api) and [Seed680](https://github.com/Seed680/telegram-bot-api) work.
 Thanks, guys!
 
-This is a community supported Home Assistant App [Telegram Bot API](https://github.com/tdlib/telegram-bot-api).\
-Telegram Bot API allows you to self-host instead of using the official Telegram server at `https://api.telegram.org`.
+This is a community supported Docker image for Home Assistant App: [Telegram Bot API](https://github.com/tdlib/telegram-bot-api).\
+Telegram Bot API is an app from the Telegram developers that allows you to replace the `api.telegram.org` resource with a local version.
 
 **In addition, this build allows you to use proxy server (MTProto, SOCKS5 or HTTP) to connect to the Telegram infrastructure.**
 
