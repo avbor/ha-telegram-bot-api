@@ -4,7 +4,7 @@ set -e
 WORK_DIR="/data/telegram-bot-api"
 
 if [ ! -d "$WORK_DIR" ]; then
-    bashio::log.info "Create workdir in /data"
+    bashio::log.info "Create workdir /data/telegram-bot-api"
     mkdir -p "$WORK_DIR/temp"
 fi
 
@@ -37,7 +37,17 @@ declare -a ARGS=(
   "--dir=$WORK_DIR"
   "--temp-dir=$WORK_DIR/temp"
   "--verbosity=$LOG_LEVEL"
+  "--http-port=8081"
 )
+
+if bashio::config.true 'stat_enabled'; then
+    STAT_PORT="8082"
+    bashio::log.info "HTTP statistics enabled on internal port: $STAT_PORT"
+    ARGS+=("--http-stat-port=${STAT_PORT}")
+else
+    bashio::log.info "HTTP statistics server is disabled"
+fi
+
 
 PRX_TYPE=$(bashio::config 'proxy.prx_type')
 
