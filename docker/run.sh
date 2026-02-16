@@ -48,7 +48,6 @@ else
     bashio::log.info "HTTP statistics server is disabled"
 fi
 
-
 PRX_TYPE=$(bashio::config 'proxy.prx_type')
 
 if [ "$PRX_TYPE" != "none" ]; then
