@@ -66,6 +66,6 @@ LABEL \
   org.opencontainers.image.description="${BUILD_DESCRIPTION}" \
   org.opencontainers.image.authors="avbor (https://github.com/avbor)" \
   org.opencontainers.image.licenses="MIT" \
-  org.opencontainers.image.source="https://github.com/avbor/telegram-bot-api" \
-  org.opencontainers.image.documentation="https://github.com/avbor/telegram-bot-api/blob/main/README.md" \
+  org.opencontainers.image.source="https://github.com/avbor/ha-telegram-bot-api" \
+  org.opencontainers.image.documentation="https://github.com/avbor/ha-telegram-bot-api/blob/main/README.md" \
   org.opencontainers.image.version=${BUILD_VERSION}
