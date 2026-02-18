@@ -25,6 +25,9 @@ MTProto
 --proxy-secret=secret_here
 ```
 
+The container was built from the Home Assistant base [image](https://github.com/home-assistant/docker-base).\
+Telegram Bot API server built from the [official source](https://github.com/tdlib/telegram-bot-api) with some additions from [Seed680](https://github.com/Seed680/telegram-bot-api) for easy proxy setup.
+
 For more information, please refer to the official documentation at: \
 https://core.telegram.org/bots/api#using-a-local-bot-api-server. \
 And Home Assistant App docs here: \
