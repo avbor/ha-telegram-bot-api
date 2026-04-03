@@ -1,6 +1,6 @@
 ARG BUILD_NAME="Home Assistant App: Telegram Bot API"
 ARG BUILD_DESCRIPTION="Docker image for Telegram Bot API. Built for Home Assistant Apps."
-ARG BUILD_VERSION="9.5"
+ARG BUILD_VERSION="9.6"
 ARG BUILD_ARCH="amd64"
 
 # ---------- Stage 1: Build ----------
@@ -15,9 +15,11 @@ RUN apk update && \
     apk upgrade && \
     apk add --no-cache alpine-sdk linux-headers git zlib-dev openssl-dev gperf cmake
 
-# Clone repo
+# Clone sources
 WORKDIR /src
-RUN git clone --recursive https://github.com/tdlib/telegram-bot-api.git . --depth 1 --branch ${TELEGRAM_BOT_API_REF}
+RUN git clone --recursive https://github.com/tdlib/telegram-bot-api.git . --depth 1 && \
+    cd telegram-bot-api && \
+    git checkout ${TELEGRAM_BOT_API_REF}
 
 # Add proxy support patches
 COPY ./add_proxy/*.patch .
